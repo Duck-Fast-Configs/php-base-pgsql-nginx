@@ -105,7 +105,7 @@ setupProject() {
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Timezones && sh dfc-default.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Timezones && sh dfc-update.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Setup && sh dfc-clean.sh -d1) >&3
-    message_space 1
+
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-pgsql/Setup/Users && sh dfc-default.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-pgsql/Setup && sh dfc-sudo.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-pgsql/Setup && sh dfc-zsh.sh -d1) >&3
@@ -135,7 +135,7 @@ setupProject() {
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-pgsql/Timezones && sh dfc-default.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-pgsql/Timezones && sh dfc-update.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-pgsql/Setup && sh dfc-clean.sh -d1) >&3
-    message_space 1
+
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-nginx/Setup/Users && sh dfc-default.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-nginx/Setup && sh dfc-sudo.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-nginx/Setup && sh dfc-zsh.sh -d1) >&3
