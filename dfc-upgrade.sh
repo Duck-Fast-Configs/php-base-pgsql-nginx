@@ -49,6 +49,10 @@ setupProject() {
     dfc_global__project_host="unix:///run/docker.sock" || 
     dfc_global__project_host="unix:///var/run/docker.sock"
 
+    dfc_global__project_pgsql_pass=$(openssl rand -base64 32)
+    dfc_global__project_nginx_login=$(openssl rand -base64 32)
+    dfc_global__project_nginx_pass=$(openssl rand -base64 32)
+
     message_info "Поле опциональное" 1
     message_input "Введите ваше имя\n"
     message_input "=> "
