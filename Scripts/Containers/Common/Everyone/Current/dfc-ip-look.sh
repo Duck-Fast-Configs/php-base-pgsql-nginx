@@ -12,6 +12,8 @@ message_info "$(date '+%H:%M:%S (%d/%m/%Y)')" 2
 message_space 2
 message_input "Список контейнеров:\n"
 message_input "1. dfc-host-php\n"
+message_input "2. dfc-host-psql\n"
+message_input "3. dfc-host-nginx\n"
 message_input "=> "
 read -p '' dfc_container
 message_space 1
@@ -21,6 +23,18 @@ case $dfc_container in
     message_info "IP адрес"
     message_space_null
     docker-compose -p $dfc_global__project_name exec -u root dfc-host-php ash -c "hostname -i" >&3
+    message_space_null
+    ;;
+"2")
+    message_info "IP адрес"
+    message_space_null
+    docker-compose -p $dfc_global__project_name exec -u root dfc-host-psql ash -c "hostname -i" >&3
+    message_space_null
+    ;;
+"3")
+    message_info "IP адрес"
+    message_space_null
+    docker-compose -p $dfc_global__project_name exec -u root dfc-host-nginx ash -c "hostname -i" >&3
     message_space_null
     ;;
 esac
