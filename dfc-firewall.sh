@@ -24,10 +24,6 @@ case $dfc_project_general_choice in
 "1")
     message_space 1
     
-    (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Firewall/Unblock && sh dfc-all.sh -d1) >&3
-    (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-php/Firewall/Block && sh dfc-insecure.sh -d1) >&3
-    (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-pgsql/Firewall/Unblock && sh dfc-all.sh -d1) >&3
-    (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-pgsql/Firewall/Block && sh dfc-insecure.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-nginx/Firewall/Unblock && sh dfc-all.sh -d1) >&3
     (cd $dfc_project_main_folder/Scripts/Containers/dfc-host-nginx/Firewall/Block && sh dfc-insecure.sh -d1) >&3
     
