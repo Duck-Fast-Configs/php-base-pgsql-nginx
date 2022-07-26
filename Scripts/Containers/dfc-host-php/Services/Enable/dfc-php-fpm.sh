@@ -11,7 +11,9 @@ dfc_project_main_folder="../../../../.."
 message_info "$(date '+%H:%M:%S (%m/%d/%y%)')" 2
 message_space 2
 
+docker-compose -p $dfc_global__project_name exec -u root dfc-host-php ash -c "rc-update add php-fpm7 boot" >&1
 docker-compose -p $dfc_global__project_name exec -u root dfc-host-php ash -c "rc-update add php-fpm8 boot" >&1
+docker-compose -p $dfc_global__project_name exec -u root dfc-host-php ash -c "rc-update add php-fpm81 boot" >&1
 
 message_info "Для активации сервиса требуется перезапустить dfc-проект" 2
 message_info "В контейнере 'dfc-host-php' сервис 'php-fpm' включен в автозапуск" 1

@@ -11,9 +11,11 @@ dfc_project_main_folder="../../../../.."
 message_info "$(date '+%H:%M:%S (%m/%d/%y%)')" 2
 message_space 2
 
+docker-compose -p $dfc_global__project_name exec -u root dfc-host-php ash -c "rc-update del php-fpm7 boot" >&1
 docker-compose -p $dfc_global__project_name exec -u root dfc-host-php ash -c "rc-update del php-fpm8 boot" >&1
+docker-compose -p $dfc_global__project_name exec -u root dfc-host-php ash -c "rc-update del php-fpm81 boot" >&1
 
-message_info "Для деактивации сервиса требуется перезапустить dfc-проект" 1
+message_info "Для деактивации сервиса требуется перезапустить dfc-проект" 2
 message_info "В контейнере 'dfc-host-php' сервис 'php-fpm' удален из автозапуска" 1
 
 # End of script
